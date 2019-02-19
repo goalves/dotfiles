@@ -1,0 +1,56 @@
+[user]
+  name = Gabriel Alves
+  email = g04lves@gmail.com
+  signingkey = 487B1DD3ABE48008
+
+[alias]
+  co = checkout
+  st = status
+  df = diff
+  dc = diff --cached
+  pr = pull --rebase
+  pop = stash pop
+  prb = pull -r
+  prbm = pull --rebase origin master
+  lg = log --graph --pretty=format:'%C(yellow)%h %Cblue%aN %Cgreen%ar %Cblue%G? %Creset%s'
+  ls = log --stat
+  ssu = stash -u
+  ss = stash
+  ssp = stash pop
+  cm = "!f() { git commit -m \"$1\"; }; f"
+  cmd = "!f() { git commit -m \"$1\" -m \"$2\"; }; f"
+  clbr = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+[credential]
+  helper = osxkeychain
+
+[commit]
+  gpgsign = true
+
+[gpg]
+  program = gpg
+
+[core]
+  excludesfile = /Users/gabriel/.gitignore
+  editor = vim
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+  trustctime = false
+
+[diff "bin"]
+  textconv = hexdump -v -C
+
+[color "status"]
+  changed = yellow
+
+[color]
+  status = auto
+  branch = auto
+  log = auto
+  commit = auto
+  diff = auto
+  interactive = auto
+  ui = true
+  pager = true
+
+[apply]
+  whitespace = fix
