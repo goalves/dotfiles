@@ -1,3 +1,5 @@
+# Exports and Themes
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/Users/gabriel/.oh-my-zsh
 export ZSH_CUSTOM=/Users/gabriel/.oh-my-zsh/custom
@@ -11,6 +13,8 @@ ZSH_THEME="spaceship"
 plugins=(zsh-syntax-highlighting zsh-autosuggestions elixir)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.cargo/env
+
+# Functions
 
 function myip() {
     ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
@@ -55,31 +59,6 @@ function extract() {
   fi
 }
 
-
-alias dps='docker ps'
-alias dkup='docker compose up -d'
-alias dall='docker kill $(docker ps -q)'
-alias dps='docker ps'
-alias dpsa='docker ps -a'
-alias grep='grep --color=auto'
-alias weather="curl -4 'http://wttr.in/Porto+Alegre?m'"
-alias weatheraus="curl -4 'http://wttr.in/Austin?m'"
-alias iex='iex --erl "-kernel shell_history enabled"'
-alias reload="source ~/.zshrc"
-alias prj="cd ~/Projects"
-alias dev="cd ~/Projects"
-alias yapf=" python3.6 /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/yapf -i -r ."
-alias frasp="sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'"
-alias ls='lsd -a'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alias map="xargs -n1"
-alias update="brew update && brew upgrade"
-alias pr=pull_request
-
 function explain () {
   if [ "$#" -eq 0 ]; then
     while read  -p "Command: " cmd; do
@@ -107,10 +86,42 @@ function pull_request() {
   fi
 }
 
+# Aliases
+
+alias dps='docker ps'
+alias dkup='docker compose up -d'
+alias dall='docker kill $(docker ps -q)'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias grep='grep --color=auto'
+alias weather="curl -4 'http://wttr.in/Porto+Alegre?m'"
+alias weatheraus="curl -4 'http://wttr.in/Austin?m'"
+alias iex='iex --erl "-kernel shell_history enabled"'
+alias reload="source ~/.zshrc"
+alias prj="cd ~/Projects"
+alias dev="cd ~/Projects"
+alias yapf=" python3.6 /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/yapf -i -r ."
+alias frasp="sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'"
+alias ls='lsd -a'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias map="xargs -n1"
+alias update="brew update && brew upgrade"
+alias pr=pull_request
+
+# Prompt
+
 autoload -U promptinit; promptinit
 prompt spaceship
 
+# Sourcing GoogleSDK stuff.
+
 if [ -f '/Users/gabriel/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/gabriel/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/gabriel/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/gabriel/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Entrypoint
 
 dev
