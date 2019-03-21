@@ -78,6 +78,7 @@ alias lt='ls --tree'
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias map="xargs -n1"
 alias update="brew update && brew upgrade"
+alias pr=pull_request
 
 
 explain () {
@@ -95,7 +96,17 @@ explain () {
   fi
 }
 
-pair () {open vnc://$1.local}
+function pair () {open vnc://$1.local}
+
+function pull_request() {
+  branch=$(git rev-parse --abbrev-ref HEAD)
+  userRepo=$(git remote -v | grep fetch | awk '{print $2}' | grep "github.com")
+
+  if [ -n "$userRepo" ]
+  then
+      open "$userRepo/compare/$branch?expand=1"
+  fi
+}
 
 autoload -U promptinit; promptinit
 prompt spaceship
