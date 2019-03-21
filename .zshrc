@@ -80,8 +80,7 @@ alias map="xargs -n1"
 alias update="brew update && brew upgrade"
 alias pr=pull_request
 
-
-explain () {
+function explain () {
   if [ "$#" -eq 0 ]; then
     while read  -p "Command: " cmd; do
       curl -Gs "https://www.mankier.com/api/explain/?cols="$(tput cols) --data-urlencode "q=$cmd"
