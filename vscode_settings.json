@@ -1,0 +1,29 @@
+{
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "window.zoomLevel": 1,
+  "gitlens.defaultDateStyle": "absolute",
+  "editor.renderWhitespace": "boundary",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.tabSize": 2,
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontSize": 12,
+  "editor.fontLigatures": true,
+  "[elixir]": {
+    "editor.formatOnSave": true,
+  },
+  "editor.rulers": [
+    120
+  ],
+  "workbench.activityBar.visible": false,
+  "workbench.sideBar.location": "right",
+  "files.exclude": {
+    ".elixir_ls": true,
+    "**/_build": true,
+    "**/deps": true,
+    "**/.vscode": true
+  }
+}
