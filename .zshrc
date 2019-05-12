@@ -10,11 +10,10 @@ export PATH="$HOME/.asdf/asdf.sh:$PATH"
 export PATH="$HOME/.asdf/completions/asdf.bash:$PATH"
 
 ZSH_THEME="spaceship"
-plugins=(zsh-syntax-highlighting zsh-autosuggestions elixir)
+plugins=(zsh-syntax-highlighting zsh-autosuggestions git)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.cargo/env
-
-# Functions
+source /Users/gabriel/.rvm/scripts/rvm
 
 function myip() {
     ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
@@ -86,42 +85,44 @@ function pull_request() {
   fi
 }
 
-# Aliases
-
 alias dps='docker ps'
 alias dkup='docker compose up -d'
 alias dall='docker kill $(docker ps -q)'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
-alias grep='grep --color=auto'
-alias weather="curl -4 'http://wttr.in/Porto+Alegre?m'"
-alias weatheraus="curl -4 'http://wttr.in/Austin?m'"
-alias iex='iex --erl "-kernel shell_history enabled"'
-alias reload="source ~/.zshrc"
+alias dlogs="docker ps | grep backend_staging | awk '{print $1; exit}'"
 alias prj="cd ~/Projects"
 alias dev="cd ~/Projects"
-alias yapf=" python3.6 /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/yapf -i -r ."
-alias frasp="sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'"
 alias ls='lsd -a'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alias map="xargs -n1"
-alias update="brew update && brew upgrade"
+alias reload="source ~/.zshrc"
+alias grep='grep --color=auto'
+alias weather="curl -4 'http://wttr.in/Porto+Alegre?m'"
+alias weatheraus="curl -4 'http://wttr.in/Austin?m'"
+alias yapf=" python3.6 /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/yapf -i -r ."
+alias frasp="sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'"
 alias pr=pull_request
+alias update="brew update && brew upgrade"
+alias map="xargs -n1"
+alias iex='iex --erl "-kernel shell_history enabled"'
+alias mf='mix format'
+alias mtf='mix test --failed'
+alias fuck='sudo'
+alias fucking='sudo'
+alias c='clear'
 
-# Prompt
 
 autoload -U promptinit; promptinit
 prompt spaceship
 
-# Sourcing GoogleSDK stuff.
+dev
 
 if [ -f '/Users/gabriel/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/gabriel/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/gabriel/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/gabriel/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Entrypoint
 
-dev
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
