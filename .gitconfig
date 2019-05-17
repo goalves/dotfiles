@@ -20,6 +20,7 @@
   cm = "!f() { git commit -m \"$1\"; }; f"
   cmd = "!f() { git commit -m \"$1\" -m \"$2\"; }; f"
   clbr = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  cs = "!f() { EDITOR=vim git commit -e -m ["$1"]; }; f"
 
 [credential]
   helper = osxkeychain
