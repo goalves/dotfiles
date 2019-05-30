@@ -110,6 +110,7 @@ alias map="xargs -n1"
 alias iex='iex --erl "-kernel shell_history enabled"'
 alias mf='mix format'
 alias mtf='mix test --failed'
+alias mtw='mix test --only wip'
 alias fuck='sudo'
 alias fucking='sudo'
 alias c='clear'
