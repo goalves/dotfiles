@@ -1,8 +1,8 @@
 # Exports and Themes
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ZSH=/Users/gabriel/.oh-my-zsh
-export ZSH_CUSTOM=/Users/gabriel/.oh-my-zsh/custom
+export ZSH=/Users/goalves/.oh-my-zsh
+export ZSH_CUSTOM=/Users/goalves/.oh-my-zsh/custom
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PATH="$HOME/.bin:$PATH"
@@ -12,8 +12,6 @@ export PATH="$HOME/.asdf/completions/asdf.bash:$PATH"
 ZSH_THEME="spaceship"
 plugins=(zsh-syntax-highlighting zsh-autosuggestions git)
 source $ZSH/oh-my-zsh.sh
-source $HOME/.cargo/env
-source /Users/gabriel/.rvm/scripts/rvm
 
 function myip() {
     ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
@@ -117,12 +115,11 @@ alias c='clear'
 
 
 autoload -U promptinit; promptinit
-prompt spaceship
 
 dev
 
-if [ -f '/Users/gabriel/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/gabriel/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/gabriel/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/gabriel/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/goalves/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/goalves/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/goalves/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/goalves/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
