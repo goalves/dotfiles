@@ -9,7 +9,6 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.asdf/asdf.sh:$PATH"
 export PATH="$HOME/.asdf/completions/asdf.bash:$PATH"
 
-ZSH_THEME="spaceship"
 plugins=(zsh-syntax-highlighting zsh-autosuggestions git)
 source $ZSH/oh-my-zsh.sh
 
@@ -114,13 +113,10 @@ alias fucking='sudo'
 alias c='clear'
 
 
-autoload -U promptinit; promptinit
-
-dev
+# autoload -U promptinit; promptinit
 
 if [ -f '/Users/goalves/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/goalves/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/goalves/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/goalves/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+source $HOME/.cargo/bin
 
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+eval "$(starship init zsh)"
