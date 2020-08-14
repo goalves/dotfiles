@@ -6,6 +6,7 @@ export ZSH_CUSTOM=/Users/goalves/.oh-my-zsh/custom
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.asdf/asdf.sh:$PATH"
 export PATH="$HOME/.asdf/completions/asdf.bash:$PATH"
 
