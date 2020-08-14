@@ -14,18 +14,18 @@ plugins=(zsh-syntax-highlighting zsh-autosuggestions git)
 source $ZSH/oh-my-zsh.sh
 
 function myip() {
-    ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
-    ifconfig en0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en0 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-    ifconfig en0 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en0 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
-    ifconfig en1 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en1 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-    ifconfig en1 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en1 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
+  ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
+  ifconfig en0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en0 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
+  ifconfig en0 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en0 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
+  ifconfig en1 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en1 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
+  ifconfig en1 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en1 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
 }
 
 function extract() {
-  if [ -f "$1" ] ; then
+  if [ -f "$1" ]; then
     local filename=$(basename "$1")
     local foldername="${filename%%.*}"
-    local fullpath=`perl -e 'use Cwd "abs_path";print abs_path(shift)' "$1"`
+    local fullpath=$(perl -e 'use Cwd "abs_path";print abs_path(shift)' "$1")
     local didfolderexist=false
     if [ -d "$foldername" ]; then
       didfolderexist=true
@@ -37,28 +37,28 @@ function extract() {
     fi
     mkdir -p "$foldername" && cd "$foldername"
     case $1 in
-      *.tar.bz2) tar xjf "$fullpath" ;;
-      *.tar.gz) tar xzf "$fullpath" ;;
-      *.tar.xz) tar Jxvf "$fullpath" ;;
-      *.tar.Z) tar xzf "$fullpath" ;;
-      *.tar) tar xf "$fullpath" ;;
-      *.taz) tar xzf "$fullpath" ;;
-      *.tb2) tar xjf "$fullpath" ;;
-      *.tbz) tar xjf "$fullpath" ;;
-      *.tbz2) tar xjf "$fullpath" ;;
-      *.tgz) tar xzf "$fullpath" ;;
-      *.txz) tar Jxvf "$fullpath" ;;
-      *.zip) unzip "$fullpath" ;;
-      *) echo "'$1' cannot be extracted via extract()" && cd .. && ! $didfolderexist && rm -r "$foldername" ;;
+    *.tar.bz2) tar xjf "$fullpath" ;;
+    *.tar.gz) tar xzf "$fullpath" ;;
+    *.tar.xz) tar Jxvf "$fullpath" ;;
+    *.tar.Z) tar xzf "$fullpath" ;;
+    *.tar) tar xf "$fullpath" ;;
+    *.taz) tar xzf "$fullpath" ;;
+    *.tb2) tar xjf "$fullpath" ;;
+    *.tbz) tar xjf "$fullpath" ;;
+    *.tbz2) tar xjf "$fullpath" ;;
+    *.tgz) tar xzf "$fullpath" ;;
+    *.txz) tar Jxvf "$fullpath" ;;
+    *.zip) unzip "$fullpath" ;;
+    *) echo "'$1' cannot be extracted via extract()" && cd .. && ! $didfolderexist && rm -r "$foldername" ;;
     esac
   else
     echo "'$1' is not a valid file"
   fi
 }
 
-function explain () {
+function explain() {
   if [ "$#" -eq 0 ]; then
-    while read  -p "Command: " cmd; do
+    while read -p "Command: " cmd; do
       curl -Gs "https://www.mankier.com/api/explain/?cols="$(tput cols) --data-urlencode "q=$cmd"
     done
     echo "Bye!"
@@ -71,15 +71,14 @@ function explain () {
   fi
 }
 
-function pair () {open vnc://$1.local}
+function pair() {open vnc://$1.local}
 
 function pull_request() {
   branch=$(git rev-parse --abbrev-ref HEAD)
   userRepo=$(git remote -v | grep fetch | awk '{print $2}' | grep "github.com")
 
-  if [ -n "$userRepo" ]
-  then
-      open "$userRepo/compare/$branch?expand=1"
+  if [ -n "$userRepo" ]; then
+    open "$userRepo/compare/$branch?expand=1"
   fi
 }
 
@@ -112,7 +111,6 @@ alias mtw='mix test --only wip'
 alias fuck='sudo'
 alias fucking='sudo'
 alias c='clear'
-
 
 # autoload -U promptinit; promptinit
 
