@@ -7,6 +7,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/Users/goalves/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.asdf/asdf.sh:$PATH"
 export PATH="$HOME/.asdf/completions/asdf.bash:$PATH"
 
