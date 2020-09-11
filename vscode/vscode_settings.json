@@ -13,11 +13,9 @@
   "editor.fontSize": 12,
   "editor.fontLigatures": true,
   "[elixir]": {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
-  "editor.rulers": [
-    120
-  ],
+  "editor.rulers": [120],
   "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "right",
   "files.exclude": {

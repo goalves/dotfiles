@@ -114,8 +114,6 @@ alias fuck='sudo'
 alias fucking='sudo'
 alias c='clear'
 
-# autoload -U promptinit; promptinit
-
 if [ -f '/Users/goalves/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/goalves/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/goalves/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/goalves/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 source $HOME/.cargo/bin
