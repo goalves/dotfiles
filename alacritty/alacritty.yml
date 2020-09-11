@@ -45,25 +45,20 @@ font:
 
   use_thin_strokes: false
 
-# Base16 Chalk 256 - alacritty color config
-# Chris Kempson (http://chriskempson.com)
 colors:
-  # Default colors
   primary:
     background: "0x2c2c2c"
     foreground: "0xd6d6d6"
 
     dim_foreground: "0xdbdbdb"
     bright_foreground: "0xd9d9d9"
-    dim_background: "0x202020" # not sure
-    bright_background: "0x3a3a3a" # not sure
+    dim_background: "0x202020"
+    bright_background: "0x3a3a3a"
 
-  # Cursor colors
   cursor:
     text: "0x2c2c2c"
     cursor: "0xd9d9d9"
 
-  # Normal colors
   normal:
     black: "0x1c1c1c"
     red: "0xbc5653"
@@ -74,7 +69,6 @@ colors:
     cyan: "0x86d3ce"
     white: "0xcacaca"
 
-  # Bright colors
   bright:
     black: "0x636363"
     red: "0xbc5653"
@@ -85,7 +79,6 @@ colors:
     cyan: "0x86d3ce"
     white: "0xf7f7f7"
 
-  # Dim colors
   dim:
     black: "0x232323"
     red: "0x74423f"
