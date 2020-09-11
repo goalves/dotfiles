@@ -121,9 +121,11 @@ cursor:
 live_config_reload: true
 
 shell:
-  program: /bin/zsh
+  program: /usr/local/bin/fish
   args:
     - --login
+    - --init-command
+    - neofetch
 
 key_bindings:
   - { key: V, mods: Command, action: Paste }
