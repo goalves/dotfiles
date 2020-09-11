@@ -2,7 +2,6 @@
   "atomKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnPaste": true,
-  "workbench.colorTheme": "Material Theme Darker High Contrast",
   "window.zoomLevel": 1,
   "gitlens.defaultDateStyle": "absolute",
   "editor.renderWhitespace": "boundary",
@@ -12,9 +11,7 @@
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontSize": 12,
   "editor.fontLigatures": true,
-  "[elixir]": {
-    "editor.formatOnSave": true
-  },
+  "editor.formatOnSave": true,
   "editor.rulers": [120],
   "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "right",
@@ -23,5 +20,42 @@
     "**/_build": true,
     "**/deps": true,
     "**/.vscode": true
-  }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.updateChannel": "Insiders",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "rust.mode": "rls",
+  "rust.rustup": {
+    "toolchain": "stable-x86_64-apple-darwin",
+    "nightlyToolchain": "nightly-x86_64-apple-darwin"
+  },
+  "rust.rls": {
+    "useRustfmt": true
+  },
+  "workbench.colorTheme": "Horizon",
+  "workbench.preferredDarkColorTheme": "Horizon",
+  "workbench.preferredLightColorTheme": "Horizon Bright",
+  "window.autoDetectColorScheme": true,
+  "editor.minimap.enabled": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Microsoft",
+  "liveshare.sharedTerminalHeight": 300,
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish"
 }
