@@ -33,7 +33,7 @@ font:
     family: Fira Code
     style: Italic
 
-  size: 16.0
+  size: 14.0
 
   offset:
     x: 0
@@ -89,7 +89,7 @@ colors:
     cyan: "0x5c8482"
     white: "0x828282"
 
-background_opacity: 0.9
+background_opacity: 0.93
 
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
