@@ -1,7 +1,7 @@
 [user]
 name = Gabriel Alves
 email = g04lves@gmail.com
-signingkey = CE886A270146497A
+signingkey = signing_key
 
 [github]
 user = goalves
@@ -27,7 +27,7 @@ clbr = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git b
 cs = "!f() { EDITOR=vim git commit -e -m ["$1"]; }; f"
 
 [credential]
-helper = osxkeychain
+helper = store
 
 [commit]
 gpgsign = true
@@ -36,7 +36,7 @@ gpgsign = true
 program = gpg
 
 [core]
-excludesfile = /Users/goalves/.gitignore
+excludesfile = /home/doki/.gitignore
 editor = vim
 whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 trustctime = false
