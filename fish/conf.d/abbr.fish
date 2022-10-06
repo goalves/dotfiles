@@ -9,3 +9,4 @@ abbr -a -U -- mtw 'mix test --only wip'
 abbr -a -U -- weather curl\ -4\ \'http://wttr.in/Porto+Alegre\?m
 abbr -a -U -- pbcopy 'xclip -selection clipboard'
 abbr -a -U -- pbpaste 'xclip -selection clipboard -o'
+abbr -a -U -- hx 'helix'
