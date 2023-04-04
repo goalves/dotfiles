@@ -1,0 +1,8 @@
+[user]
+name = Gabriel Alves
+email = email@gmail.com
+signingkey = signing_key
+
+[github]
+user = goalves
+token = token
