@@ -1,11 +1,10 @@
 # Dotfiles
 
-These are not updated at all, there is no configuration to set them up manually because I got not time for that.
+This has more than dotfiles and actually sets up several other stuff.
+I am currently using MacOS.
 
-## Tmux
+## MacOS setup
 
-If tmux plugins are not being installed for some reason, you should run:
-
-```sh
-~/.tmux/plugins/tpm/bin/install_plugins
-```
+- Install Warp
+- Install GPGSuite
+- Follow script on setup.sh
