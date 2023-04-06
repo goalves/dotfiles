@@ -12,4 +12,5 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 source ~/.asdf/asdf.fish
 
+fnm env --use-on-cd | source
 starship init fish | source
