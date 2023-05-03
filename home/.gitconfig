@@ -56,3 +56,5 @@ whitespace = fix
 
 [web]
 browser = firefox
+[init]
+	defaultBranch = main
