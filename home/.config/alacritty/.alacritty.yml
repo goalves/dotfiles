@@ -41,8 +41,6 @@ font:
     x: 0
     y: 0
 
-  use_thin_strokes: false
-
 colors:
   primary:
     background: "0x2c2c2c"
@@ -106,7 +104,7 @@ cursor:
 live_config_reload: true
 
 shell:
-  program: /usr/bin/fish
+  program: /opt/homebrew/bin/fish
   args:
     - --login
     - --init-command

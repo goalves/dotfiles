@@ -7,7 +7,4 @@ abbr -a -- mt 'mix test'
 abbr -a -- mtf 'mix test --failed'
 abbr -a -- mtw 'mix test --only wip'
 abbr -a -- weather curl\ -4\ \'http://wttr.in/Porto+Alegre\?m
-
-# abbr -a -- pbcopy 'xclip -selection clipboard'
-# abbr -a -- pbpaste 'xclip -selection clipboard -o'
 abbr -a -- helix 'hx'

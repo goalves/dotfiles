@@ -10,8 +10,6 @@ SETUVAR _fish_abbr_mf:mix\x20format
 SETUVAR _fish_abbr_mt:mix\x20test
 SETUVAR _fish_abbr_mtf:mix\x20test\x20\x2d\x2dfailed
 SETUVAR _fish_abbr_mtw:mix\x20test\x20\x2d\x2donly\x20wip
-SETUVAR _fish_abbr_pbcopy:xclip\x20\x2dselection\x20clipboard
-SETUVAR _fish_abbr_pbpaste:xclip\x20\x2dselection\x20clipboard\x20\x2do
 SETUVAR _fish_abbr_weather:curl\x20\x2d4\x20\x27http\x3a//wttr\x2ein/Porto\x2bAlegre\x3fm
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr
