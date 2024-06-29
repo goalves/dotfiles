@@ -1,13 +1,22 @@
 # Dotfiles
 
-This has more than dotfiles and actually sets up several other stuff.
-I am currently using MacOS.
+Previously using:
+- Alacritty
+- Tmux
+- Helix/VSCode (ew)
 
-## MacOS setup
+Currently using:
+- Wezterm
+- Zed
+- Fish
 
-- Install Alacritty (other option would be to use Warp but its slow)
+Testing out how wezterm tabs/panes work in comparison to using tmux
+
+## Setup
+
 - Install GPGSuite
 - Follow script on setup.sh
+- Use stow to symlink .config files properly
 
 ## Tmux
 

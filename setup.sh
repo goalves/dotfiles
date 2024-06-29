@@ -5,11 +5,10 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew tap homebrew/cask-fonts
-brew install --cask font-fira-code
+brew install --cask font-fira-code wezterm zed
 
-# Install other useful stuff
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-brew install fish helix tmux btop tig neovim coreutils curl git bat alacritty postgresql@15 libpq fnm
+# Install Brew stuff from leaves file
+xargs brew install < leaves.txt
 
 # Install oh my fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
@@ -35,8 +34,11 @@ brew install font-hack-nerd-font
 asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
 
-# Now manually install files to their locations
-
 # Configure Fish
 mkdir -p ~/.config/fish/completions
 ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+
+# Use stow to configure the home/.config files to their correct location ~/.
+
+# Configure Wezterm
+ln -s wezterm.lua ~/.config/wezterm/wezterm.lua

@@ -30,7 +30,7 @@ gpgsign = true
 program = gpg
 
 [core]
-excludesfile = /home/gabrielaves/.gitignore
+excludesfile = /home/goalves/.gitignore
 editor = vim
 whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 trustctime = false
@@ -54,7 +54,5 @@ pager = true
 [apply]
 whitespace = fix
 
-[web]
-browser = firefox
 [init]
 	defaultBranch = main
