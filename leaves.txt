@@ -8,7 +8,6 @@ coreutils
 curl
 discord
 notunes
-docker
 fish
 fnm
 font-fira-code

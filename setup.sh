@@ -10,6 +10,9 @@ xargs brew install < leaves.txt
 # Install oh my fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
+# Install correct docker as the one in brew without --cask isn't docker for macos
+brew install --cask docker
+
 # Install ASDF
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
