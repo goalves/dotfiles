@@ -24,6 +24,7 @@ postgresql@15
 shottr
 slack
 spotify
+starship
 stow
 tig
 tmux

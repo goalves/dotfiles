@@ -10,9 +10,6 @@ xargs brew install < leaves.txt
 # Install oh my fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
-# Install Starship
-curl -sS https://starship.rs/install.sh | sh
-
 # Install ASDF
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
