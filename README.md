@@ -1,26 +1,16 @@
 # Dotfiles
 
-Previously using:
-- Alacritty
-- Tmux
-- Helix/VSCode (ew)
+These are STILL not updated but at least I have someting to resort to in case of despair.
 
-Currently using:
-- Wezterm
-- Zed
-- Fish
-
-Testing out how wezterm tabs/panes work in comparison to using tmux
+Currently using MacOS, Wezterm, Fish, Starship, Zed.
 
 ## Setup
 
-- Follow script on setup.sh
-- If on macos reun macos.sh
+- Follow `setup.sh` to install base stuff
+- Run `macos.sh` to setup MacOS related stuff (keyboard, menu bar, etc)
 
-## Tmux
+## Configuring Git
 
-If tmux plugins are not being installed for some reason, you should run:
+Private keys and references should live in the `.gitconfig.local` file as it is imported through the `.gitconfig` file.
 
-```sh
-~/.tmux/plugins/tpm/bin/install_plugins
-```
+There is an example of how to set it up for `GitHub`.
