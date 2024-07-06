@@ -16,3 +16,7 @@ tmux
 tree
 wxwidgets
 stow
+font-fira-code
+wezterm
+zed
+font-hack-nerd-font

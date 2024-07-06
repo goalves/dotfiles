@@ -4,9 +4,6 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew tap homebrew/cask-fonts
-brew install --cask font-fira-code wezterm zed
-
 # Install Brew stuff from leaves file
 xargs brew install < leaves.txt
 
@@ -25,10 +22,6 @@ git clone https://github.com/goalves/dotfiles
 
 # Install TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# Install nerdfonts
-brew tap homebrew/cask-fonts
-brew install font-hack-nerd-font
 
 # Setup ASDF elixir and erlang
 asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
