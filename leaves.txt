@@ -21,7 +21,7 @@ neovim
 notion
 obs
 postgresql@15
-skitch
+shottr
 slack
 spotify
 stow
