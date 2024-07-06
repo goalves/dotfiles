@@ -6,5 +6,4 @@ abbr -a -- mf 'mix format'
 abbr -a -- mt 'mix test'
 abbr -a -- mtf 'mix test --failed'
 abbr -a -- mtw 'mix test --only wip'
-abbr -a -- weather curl\ -4\ \'http://wttr.in/Porto+Alegre\?m
-abbr -a -- helix 'hx'
+abbr -a -- weather curl\ -4\ \'http://wttr.in/Porto+Alegre\?m\'
