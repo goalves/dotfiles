@@ -15,7 +15,7 @@ Testing out how wezterm tabs/panes work in comparison to using tmux
 ## Setup
 
 - Follow script on setup.sh
-- Use stow to symlink .config files properly
+- If on macos reun macos.sh
 
 ## Tmux
 
