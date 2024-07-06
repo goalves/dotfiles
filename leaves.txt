@@ -15,6 +15,7 @@ font-hack-nerd-font
 gh
 git
 golangci-lint
+gpg-suite
 helix
 libpq
 neovim
