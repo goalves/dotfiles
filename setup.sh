@@ -32,4 +32,4 @@ mkdir -p ~/.config/fish/completions
 ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
 # Use stow to configure the home/.config files to their correct location ~/. after cd into home folder (--adopt instead of restow might work)
-stow -v --restow -t ~ .
+stow -vR --restow -t ~ .
