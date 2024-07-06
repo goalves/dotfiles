@@ -31,7 +31,5 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 mkdir -p ~/.config/fish/completions
 ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
-# Use stow to configure the home/.config files to their correct location ~/.
-
-# Configure Wezterm
-ln -s wezterm.lua ~/.config/wezterm/wezterm.lua
+# Use stow to configure the home/.config files to their correct location ~/. after cd into home folder (--adopt instead of restow might work)
+stow -v --restow -t ~ .
