@@ -1,1 +1,10 @@
 .gitconfig.local
+
+home/.config/zed/embeddings
+home/.config/zed/prompts
+home/.config/zed/themes
+home/.config/zed/conversations
+
+*.tmp*
+
+fish_variables
