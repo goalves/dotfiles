@@ -8,6 +8,7 @@ config.default_prog = { "/opt/homebrew/bin/fish", '-l' }
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
+config.font = wezterm.font 'Jetbrains Mono'
 config.default_workspace = "main"
 config.window_background_opacity = 0.95
 config.use_fancy_tab_bar = true
