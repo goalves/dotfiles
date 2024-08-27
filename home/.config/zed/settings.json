@@ -14,5 +14,15 @@
         "args": ["--login"]
       }
     }
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "buildFlags": [
+          "-tags=integration,integration_redis,postgres,ups_integration"
+        ],
+        "usePlaceholders": true
+      }
+    }
   }
 }
