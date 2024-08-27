@@ -1,5 +1,8 @@
 [include]
-  path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
+
+[includeIf "gitdir:~/Projects/happyreturns/"]
+    path = ~/Projects/happyreturns/.gitconfig
 
 [alias]
 co = checkout
@@ -50,3 +53,9 @@ whitespace = fix
 
 [init]
 defaultBranch = main
+
+[credential "https://github.com"]
+helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+helper = !/opt/homebrew/bin/gh auth git-credential
