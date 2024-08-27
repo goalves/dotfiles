@@ -13,5 +13,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 source ~/.asdf/asdf.fish
 source ~/.asdf/plugins/java/set-java-home.fish
 
+direnv hook fish | source
 fnm env --use-on-cd | source
 starship init fish | source

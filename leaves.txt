@@ -1,14 +1,17 @@
 1password
 alfred
 asdf
+awscli
 bat
 brave-browser
 btop
 coreutils
 curl
+direnv
 discord
 notunes
 fish
+flyctl
 fnm
 font-fira-code
 font-hack-nerd-font
@@ -18,8 +21,10 @@ golangci-lint
 gpg-suite
 helix
 libpq
+ngrok
 neovim
 notion
+notunes
 obs
 postgresql@15
 shottr
@@ -31,6 +36,7 @@ tig
 tmux
 tree
 vlc
+watch
 wezterm
 wxwidgets
 zed
