@@ -4,6 +4,7 @@ fish_add_path "/opt/homebrew/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "/opt/homebrew/opt/postgresql@15/bin"
 fish_add_path "/opt/homebrew/opt/libpq/bin"
+fish_add_path "$HOME/go/bin"
 
 set EDITOR vim
 set fish_greeting
