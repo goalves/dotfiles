@@ -15,6 +15,7 @@
       }
     }
   },
+  "load_direnv": "shell_hook",
   "lsp": {
     "gopls": {
       "initialization_options": {
