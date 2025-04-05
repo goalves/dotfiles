@@ -1,6 +1,2 @@
-[elixir]
-symbol = '🔮 '
-disabled = true
-
 [docker_context]
 disabled = true
