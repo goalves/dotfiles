@@ -13,9 +13,6 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 # Install correct docker as the one in brew without --cask isn't docker for macos
 brew install --cask docker
 
-# Install ASDF
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
-
 # Setup Projects folder and clone dotfiles
 mkdir ~/Projects && cd ~/Projects
 git clone https://github.com/goalves/dotfiles
@@ -24,7 +21,7 @@ git clone https://github.com/goalves/dotfiles
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Setup ASDF elixir and erlang
-asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git
 asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
 
 # Install Rust
@@ -33,6 +30,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Configure Fish
 mkdir -p ~/.config/fish/completions
 ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+
+asdf completion fish > ~/.config/fish/completions/asdf.fish
 
 # Use stow to configure the home/.config files to their correct location ~/. after cd into home folder (--adopt instead of restow might work)
 stow -vR --restow -t ~ .
