@@ -2,3 +2,4 @@
 
 .envrc
 docker-compose-local.yaml
+.zed
