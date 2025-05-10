@@ -17,9 +17,6 @@ brew install --cask docker
 mkdir ~/Projects && cd ~/Projects
 git clone https://github.com/goalves/dotfiles
 
-# Install TPM
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 # Setup ASDF elixir and erlang
 asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git
 asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
