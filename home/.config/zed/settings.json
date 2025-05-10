@@ -1,4 +1,5 @@
 {
+  "icon_theme": "Catppuccin Frappé",
   "agent": {
     "default_model": {
       "provider": "anthropic",
