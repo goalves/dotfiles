@@ -1,11 +1,28 @@
 {
+  "context_servers": {
+    "mcp-server-github": {
+      "settings": {
+        "github_personal_access_token": ""
+      }
+    }
+  },
   "icon_theme": "Catppuccin Frappé",
   "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-latest"
     },
     "version": "2"
+  },
+  "language_models": {
+    "anthropic": {
+      "version": "1",
+      "api_url": "https://api.anthropic.com"
+    },
+    "ollama": {
+      "api_url": "http://localhost:11434"
+    }
   },
   "telemetry": {
     "diagnostics": false,
@@ -25,6 +42,20 @@
   },
   "load_direnv": "shell_hook",
   "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          }
+        }
+      }
+    },
     "protobuf-language-server": {
       "binary": {
         "path": "buf",
