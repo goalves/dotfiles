@@ -31,6 +31,7 @@ excludesfile = /Users/goalves/.gitignore
 editor = vim
 whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 trustctime = false
+pager = delta
 
 [diff "bin"]
 textconv = hexdump -v -C
@@ -50,6 +51,16 @@ pager = true
 
 [apply]
 whitespace = fix
+
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+navigate = true  # use n and N to move between diff sections
+dark = true      # or light = true, or omit for auto-detection
+
+[merge]
+conflictstyle = zdiff3
 
 [init]
 defaultBranch = main
